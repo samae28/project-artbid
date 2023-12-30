@@ -7,63 +7,95 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-searchbar animated="true" placeholder="Search Artist"></ion-searchbar>
   <swiper-container>
     <swiper-slide><img src="/assets/images/image1.png" alt="Slide 3"></swiper-slide>
     <swiper-slide><img src="/assets/images/image2.png" alt="Slide 3"></swiper-slide>
     <swiper-slide><img src="/assets/images/image3.png" alt="Slide 3"></swiper-slide>
   </swiper-container>
-  <div>
-    <ion-card>
-      <ion-card-header>
-        <ion-card-subtitle>Auction</ion-card-subtitle>
-      </ion-card-header>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
+
+
+  <div> 
+
+      <ion-list>
+        <ion-list-header>
+          <ion-label>Recent Auctions</ion-label>
+          <ion-button>See All</ion-button>
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Pokémon Yellow</ion-label>
+          <ion-button color="dark">Visit<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button> 
+        </ion-item>
+        <ion-item>
+          <ion-label>Mega Man X</ion-label>
+          <ion-button color="dark">Visit<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button> 
+        </ion-item>
+        <ion-item>
+          <ion-label>The Legend of Zelda</ion-label>
+          <ion-button color="dark">Visit<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button> 
+        </ion-item>
+        <ion-item>
+          <ion-label>Pac-Man</ion-label>
+          <ion-button color="dark">Visit<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button> 
+        </ion-item>
+        <ion-item>
+          <ion-label>Super Mario World</ion-label>
+          <ion-button color="dark">Visit<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button> 
+        </ion-item>
+      </ion-list>
+
+      <!-- <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card>
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+              <ion-card-header>
+                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card>
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+              <ion-card-header>
+                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid> --> 
   </div>
   <div>
+    
+    
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Popular Medium</ion-label>
+        <ion-button>See All</ion-button>
+      </ion-list-header>
+    </ion-list>
+
     <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
       <ion-card-header>
-        <ion-card-subtitle>Popular Medium</ion-card-subtitle>
+        <ion-card-subtitle>Acrylic Paint</ion-card-subtitle>
       </ion-card-header>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
+    </ion-card>
+
+    <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-subtitle>Ink</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-subtitle>Watercolor</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+     
   </div>
 </ion-content>
