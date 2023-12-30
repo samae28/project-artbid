@@ -9,4 +9,10 @@ export class Tab3Page {
 
   constructor() {}
 
+  selectedSegment: string = 'medium';
+
+  segmentChanged() {
+    // Handle segment change if needed
+    console.log('Selected Segment:', this.selectedSegment);
+  }
 }

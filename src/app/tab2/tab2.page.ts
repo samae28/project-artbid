@@ -9,4 +9,11 @@ export class Tab2Page {
 
   constructor() {}
 
+  selectedSegment: string = 'current';
+
+  segmentChanged() {
+    // Handle segment change if needed
+    console.log('Selected Segment:', this.selectedSegment);
+  }
+
 }

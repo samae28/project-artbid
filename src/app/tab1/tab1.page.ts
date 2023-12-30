@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  containerHeight = '300px'; // Set the initial height
 
+  // Example function to dynamically change the height
+  changeHeight() {
+    this.containerHeight = '400px'; // Change the height dynamically
+  }
   constructor() {}
 
 }

@@ -6,7 +6,11 @@ const routes: Routes = [
   {
     path: '',
     component: Tab3Page,
+  },  {
+    path: 'fixed-item',
+    loadChildren: () => import('./fixed-item/fixed-item.module').then( m => m.FixedItemPageModule)
   }
+
 ];
 
 @NgModule({

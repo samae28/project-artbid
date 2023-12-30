@@ -6,7 +6,11 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
+  },  {
+    path: 'auction-item',
+    loadChildren: () => import('./auction-item/auction-item.module').then( m => m.AuctionItemPageModule)
   }
+
 ];
 
 @NgModule({

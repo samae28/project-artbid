@@ -14,8 +14,7 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./shared/login/login.module').then( m => m.LoginPageModule)
-  },
-  
+  },  
 
 ];
 @NgModule({

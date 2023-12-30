@@ -1,0 +1,23 @@
+ion-segment-button {
+    --indicator-color: #000000;
+  }
+  
+  /* Material Design styles */
+  ion-segment-button.md {
+    --color: #000;
+    --color-checked: #000000;
+    --indicator-height: 4px;
+  }
+  
+  /* iOS styles */
+  ion-segment-button.ios {
+    --color: #000000;
+    --color-checked: #fff;
+    --border-radius: 20px;
+  }
+
+
+  ion-card-subtitle {
+    display: block;
+  }
+
