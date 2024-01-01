@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>All Auction</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list> 
+    <ion-item *ngFor="let records of AllRecords">
+      <ion-label>{{records.title}}</ion-label>
+      <ion-button color="dark" (click)="Get_recentAuction_View(records.auction_id, records.title)">Visit<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>  
+    </ion-item> 
+  </ion-list> 
+  
+</ion-content>
+
+<ion-footer [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Back Button</ion-title>
+  </ion-toolbar>
+</ion-footer>

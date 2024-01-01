@@ -6,6 +6,7 @@ import { ActionSheetController } from '@ionic/angular';
  
 import { IonModal } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
+import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 @Component({
   selector: 'app-modal',
@@ -15,6 +16,7 @@ import { OverlayEventDetail } from '@ionic/core/components';
 export class ModalPage implements OnInit {
 
   ActiveAuction : any;
+  ActiveAuctionArray: any;
 
   constructor(private __services__: ApiCallsService, 
     private __repository__: RepositoryValuesService,
@@ -23,6 +25,7 @@ export class ModalPage implements OnInit {
 
       this.__services__.View_auction_item(this.__repository__.AuctionViewing).subscribe((res) => {   
         console.log(res);
+        this.ActiveAuctionArray = res; 
       }) 
     }
        

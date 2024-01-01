@@ -9,6 +9,10 @@ const routes: Routes = [
   },  {
     path: 'modal',
     loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
+  },
+  {
+    path: 'modal-seeallauction',
+    loadChildren: () => import('./modal-seeallauction/modal-seeallauction.module').then( m => m.ModalSeeallauctionPageModule)
   }
 
 ];

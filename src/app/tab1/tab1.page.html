@@ -20,7 +20,7 @@
       <ion-list>
         <ion-list-header>
           <ion-label>Recent Auctions</ion-label>
-          <ion-button>See All</ion-button>
+          <ion-button (click) = "SeeAllAuction()">See All</ion-button>
         </ion-list-header>
         <ion-item *ngFor="let records of RecentAuctionRecords">
           <ion-label>{{records.title}}</ion-label>

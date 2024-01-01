@@ -18,6 +18,10 @@ export class ApiCallsService {
     return this.http.get(this.APIURL+"recent-auction.php");
   } 
 
+  Get_AllAuction(){ 
+    return this.http.get(this.APIURL+"see-all-auction.php");
+  } 
+
   View_auction_item(auction_id:any){
     return this.http.get(this.APIURL+"auction-view-item.php?auction_id="+auction_id);
   }
