@@ -22,49 +22,14 @@
           <ion-label>Recent Auctions</ion-label>
           <ion-button>See All</ion-button>
         </ion-list-header>
-        <ion-item>
-          <ion-label>Pokémon Yellow</ion-label>
-          <ion-button color="dark">Visit<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button> 
-        </ion-item>
-        <ion-item>
-          <ion-label>Mega Man X</ion-label>
-          <ion-button color="dark">Visit<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button> 
-        </ion-item>
-        <ion-item>
-          <ion-label>The Legend of Zelda</ion-label>
-          <ion-button color="dark">Visit<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button> 
-        </ion-item>
-        <ion-item>
-          <ion-label>Pac-Man</ion-label>
-          <ion-button color="dark">Visit<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button> 
-        </ion-item>
-        <ion-item>
-          <ion-label>Super Mario World</ion-label>
-          <ion-button color="dark">Visit<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button> 
-        </ion-item>
-      </ion-list>
+        <ion-item *ngFor="let records of RecentAuctionRecords">
+          <ion-label>{{records.title}}</ion-label>
+          <ion-button color="dark" (click)="Get_recentAuction_View(records.auction_id, records.title)">Visit<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button> 
+        </ion-item> 
+      </ion-list> 
 
-      <!-- <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-card>
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-              <ion-card-header>
-                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-              </ion-card-header>
-            </ion-card>
-          </ion-col>
-          <ion-col>
-            <ion-card>
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-              <ion-card-header>
-                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-              </ion-card-header>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-      </ion-grid> --> 
-  </div>
+  </div> 
+
   <div>
     
     
