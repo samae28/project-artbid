@@ -16,6 +16,18 @@ export class ApiCallsService {
 
   Get_recentAuction(){ 
     return this.http.get(this.APIURL+"recent-auction.php");
+  }  
+  
+  Get_recentAuction_current(){ 
+    return this.http.get(this.APIURL+"auction-current.php");
+  } 
+  
+  Get_recentAuction_upcoming(){ 
+    return this.http.get(this.APIURL+"auction-upcoming.php");
+  } 
+  
+  Get_recentAuction_past(){ 
+    return this.http.get(this.APIURL+"auction-past.php");
   } 
 
   Get_AllAuction(){ 
@@ -25,9 +37,12 @@ export class ApiCallsService {
   View_auction_item(auction_id:any){
     return this.http.get(this.APIURL+"auction-view-item.php?auction_id="+auction_id);
   }
-
-  
+ 
   Get_featured_artists(){ 
     return this.http.get(this.APIURL+"see-featured-artist.php");
+  }
+
+  LoginAuth(email: any, password: any){ 
+    return this.http.get(this.APIURL+"login.php?email="+email+"&password="+password);
   }
 }

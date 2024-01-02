@@ -40,7 +40,7 @@ export class Tab1Page {
   
 
   Get_recentAuction_View(id:number,itemName: any){
-    this.openModal(id, itemName);
+    this.openModal(id, itemName); 
   }
 
   async openModal(id: number, itemName: any) { 

@@ -23,41 +23,18 @@
       <ion-row>
 
         <!-- item cards  -->
-        <ion-card>
+        <ion-card *ngFor="let records of auction_current"  (click)="Get_recentAuction_View(records.auction_id, records.title)">
           <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
           <ion-card-header>
-            <ion-card-title>Art Title</ion-card-title>
-            <ion-card-subtitle>Artist</ion-card-subtitle>
+            <ion-card-title>{{records.title}}</ion-card-title>
+            <ion-label>Auction Start : {{records.starting_time.replace(' 00:00:00','')}}</ion-label> 
+            <ion-label>Auction End : {{records.ending_time.replace(' 00:00:00','')}}</ion-label> 
           </ion-card-header>
         
           <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
+            {{records.description}}
           </ion-card-content> 
-        </ion-card>
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-          <ion-card-header>
-            <ion-card-title>Art Title</ion-card-title>
-            <ion-card-subtitle>Artist</ion-card-subtitle>
-          </ion-card-header>
-        
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content> 
-        </ion-card>
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-          <ion-card-header>
-            <ion-card-title>Art Title</ion-card-title>
-            <ion-card-subtitle>Artist</ion-card-subtitle>
-          </ion-card-header>
-        
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content> 
-        </ion-card>
-
-
+        </ion-card>  
       </ion-row>
     </ion-grid>
   </div>
@@ -66,39 +43,18 @@
       <ion-row>
 
         <!-- item cards  -->
-        <ion-card>
+        <ion-card *ngFor="let records of auction_upcoming"  (click)="Get_recentAuction_View(records.auction_id, records.title)">
           <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
           <ion-card-header>
-            <ion-card-title>Art Title</ion-card-title>
-            <ion-card-subtitle>Artist</ion-card-subtitle>
+            <ion-card-title>{{records.title}}</ion-card-title>
+            <ion-label>Auction Start : {{records.starting_time.replace(' 00:00:00','')}}</ion-label> 
+            <ion-label>Auction End : {{records.ending_time.replace(' 00:00:00','')}}</ion-label> 
           </ion-card-header>
         
           <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
+            {{records.description}}
           </ion-card-content> 
-        </ion-card>
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-          <ion-card-header>
-            <ion-card-title>Art Title</ion-card-title>
-            <ion-card-subtitle>Artist</ion-card-subtitle>
-          </ion-card-header>
-        
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content> 
-        </ion-card>
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-          <ion-card-header>
-            <ion-card-title>Art Title</ion-card-title>
-            <ion-card-subtitle>Artist</ion-card-subtitle>
-          </ion-card-header>
-        
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content> 
-        </ion-card>
+        </ion-card> 
 
       </ion-row>
     </ion-grid>
@@ -107,38 +63,17 @@
     <ion-grid>
       <ion-row>
         <!-- item cards  -->
-        <ion-card>
+        <ion-card *ngFor="let records of auction_past"  (click)="Get_recentAuction_View(records.auction_id, records.title)">
           <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
           <ion-card-header>
-            <ion-card-title>Art Title</ion-card-title>
-            <ion-card-subtitle>Artist</ion-card-subtitle>
+            <ion-card-title>{{records.title}}</ion-card-title>
+            <ion-label>Auction Start : {{records.starting_time.replace(' 00:00:00','')}}</ion-label> 
+            <ion-label>Auction End : {{records.ending_time.replace(' 00:00:00','')}}</ion-label> 
           </ion-card-header>
         
           <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content> 
-        </ion-card>
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-          <ion-card-header>
-            <ion-card-title>Art Title</ion-card-title>
-            <ion-card-subtitle>Artist</ion-card-subtitle>
-          </ion-card-header>
-        
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content> 
-        </ion-card>
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-          <ion-card-header>
-            <ion-card-title>Art Title</ion-card-title>
-            <ion-card-subtitle>Artist</ion-card-subtitle>
-          </ion-card-header>
-        
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content> 
+            {{records.description}}
+          </ion-card-content>  
         </ion-card>
       </ion-row>
     </ion-grid>

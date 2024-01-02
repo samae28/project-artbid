@@ -11,6 +11,10 @@ export class RepositoryValuesService {
   AuctionViewing: any
   AuctionItemName: any
 
+  // 1 - Auction
+  // 2 - Sold 
+  // 3 - Available (Fixed Price)
+
   constructor(private http: HttpClient) {  
 
   }

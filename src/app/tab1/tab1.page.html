@@ -24,14 +24,13 @@
       </swiper-container>  
     </div>
   </ion-row>
-  
- 
+   
     <ion-list>
       <ion-list-header>
         <ion-label>
           <h4>Auctions</h4>
         </ion-label>
-        <ion-button>See All</ion-button>
+        <ion-button (click)="SeeAllAuction()">See All</ion-button>
       </ion-list-header>
       <ion-item lines="none" *ngFor="let records of RecentAuctionRecords">
         <ion-thumbnail slot="start">
