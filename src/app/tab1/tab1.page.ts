@@ -3,7 +3,7 @@ import { ApiCallsService } from '../services/api-calls.service';
 import { RepositoryValuesService } from '../services/repository-values.service';
 
 import { Component, ViewChild } from '@angular/core'; 
-import { ModalController } from '@ionic/angular';
+import { IonicSlides, ModalController } from '@ionic/angular';
 import { ModalPage } from './modal/modal.page';
 import { ModalSeeallauctionPage } from './modal-seeallauction/modal-seeallauction.page';
 
@@ -14,7 +14,7 @@ import { ModalSeeallauctionPage } from './modal-seeallauction/modal-seeallauctio
 })
 
 export class Tab1Page {
-   
+  swiperModules = [IonicSlides];
 
   containerHeight = '300px'; // Set the initial height
   RecentAuctionRecords : any

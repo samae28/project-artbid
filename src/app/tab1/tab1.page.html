@@ -8,11 +8,44 @@
 
 <ion-content [fullscreen]="true">
   <ion-searchbar animated="true" placeholder="Search Artist"></ion-searchbar>
-  <swiper-container>
-    <swiper-slide><img src="/assets/images/image1.png" alt="Slide 3"></swiper-slide>
-    <swiper-slide><img src="/assets/images/image2.png" alt="Slide 3"></swiper-slide>
-    <swiper-slide><img src="/assets/images/image3.png" alt="Slide 3"></swiper-slide>
-  </swiper-container>
+  <ion-row class="borderBottom">
+    <div>
+      <swiper-container 
+      [modules]="swiperModules"  
+      [slidesPerView]="1.2"
+      [initialSlide]="1"
+      [keyboard]="true"
+      [autoplay]="true"
+      [spaceBetween]="20"
+      [pagination]="{clickable:true, dynamicBullets: true}">
+        <swiper-slide><img src="/assets/images/image1.png" alt="Slide 3"></swiper-slide>
+        <swiper-slide><img src="/assets/images/image2.png" alt="Slide 3"></swiper-slide>
+        <swiper-slide><img src="/assets/images/image3.png" alt="Slide 3"></swiper-slide>
+      </swiper-container>  
+    </div>
+  </ion-row>
+  
+ 
+    <ion-list>
+      <ion-list-header>
+        <ion-label>
+          <h4>Recent Auctions</h4>
+        </ion-label>
+        <ion-button>See All</ion-button>
+      </ion-list-header>
+      <ion-item lines="none" *ngFor="let records of RecentAuctionRecords">
+        <ion-thumbnail slot="start">
+          <img  src="/assets/images/image1.png" alt="Slide 3"/>
+        </ion-thumbnail>
+        <ion-label>
+          <h4>{{records.title}}</h4>
+          <ion-text color="medium">
+            <p class="pStyle">Description</p>
+          </ion-text>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+<!-- 
 
 
   <div> 
@@ -62,5 +95,5 @@
     </ion-card>
 
      
-  </div>
+  </div> -->
 </ion-content>
