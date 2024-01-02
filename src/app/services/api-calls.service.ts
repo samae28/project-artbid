@@ -25,4 +25,9 @@ export class ApiCallsService {
   View_auction_item(auction_id:any){
     return this.http.get(this.APIURL+"auction-view-item.php?auction_id="+auction_id);
   }
+
+  
+  Get_featured_artists(){ 
+    return this.http.get(this.APIURL+"see-featured-artist.php");
+  }
 }

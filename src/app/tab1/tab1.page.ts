@@ -18,6 +18,7 @@ export class Tab1Page {
 
   containerHeight = '300px'; // Set the initial height
   RecentAuctionRecords : any
+  FeaturedArtists : any
 
   // Example function to dynamically change the height
   changeHeight() {
@@ -27,9 +28,13 @@ export class Tab1Page {
     private __services__: ApiCallsService, 
     private __repository__: RepositoryValuesService, 
     private modalCtrl: ModalController) {
-    this.__services__.Get_recentAuction().subscribe((res) => {  
-          this.RecentAuctionRecords = res; 
-    }) 
+      this.__services__.Get_recentAuction().subscribe((res) => {  
+            this.RecentAuctionRecords = res; 
+      }) 
+      
+      this.__services__.Get_featured_artists().subscribe((res) => {  
+            this.FeaturedArtists = res; 
+      }) 
   }
 
   

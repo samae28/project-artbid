@@ -59,14 +59,14 @@
         </ion-label>
         <ion-button>See All</ion-button>
       </ion-list-header>
-      <ion-item lines="none" *ngFor="let records of RecentAuctionRecords">
+      <ion-item lines="none" *ngFor="let records of FeaturedArtists">
         <ion-thumbnail slot="start" class="circular-thumbnail">
           <img  src="/assets/images/pexels-andrea-piacquadio-733872.jpg" alt="Slide 3"/>
         </ion-thumbnail>
         <ion-label>
-          <h4>Name</h4>
+          <h4>{{records.artist_name}}</h4>
           <ion-text color="medium">
-            <p class="pStyle">Town, BirthYear</p>
+            <p class="pStyle">{{records.artist_contact_info}}</p>
           </ion-text>
         </ion-label>
         <ion-button color="dark" (click)="Get_recentAuction_View(records.auction_id, records.title)">Follow</ion-button>
