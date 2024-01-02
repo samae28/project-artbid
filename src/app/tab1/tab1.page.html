@@ -29,7 +29,7 @@
     <ion-list>
       <ion-list-header>
         <ion-label>
-          <h4>Recent Auctions</h4>
+          <h4>Auctions</h4>
         </ion-label>
         <ion-button>See All</ion-button>
       </ion-list-header>
@@ -41,9 +41,34 @@
           <h4>{{records.title}}</h4>
           <ion-text color="medium">
             <p class="pStyle">Description</p>
+            <ion-text>
+              <p>
+                Current Bi: N/A
+              </p>
+            </ion-text>
           </ion-text>
         </ion-label>
-      </ion-item>
+      </ion-item> 
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+        <ion-label>
+          <h4>Artists For you</h4>
+        </ion-label>
+        <ion-button>See All</ion-button>
+      </ion-list-header>
+      <ion-item lines="none" *ngFor="let records of RecentAuctionRecords">
+        <ion-thumbnail slot="start" class="circular-thumbnail">
+          <img  src="/assets/images/pexels-andrea-piacquadio-733872.jpg" alt="Slide 3"/>
+        </ion-thumbnail>
+        <ion-label>
+          <h4>Name</h4>
+          <ion-text color="medium">
+            <p class="pStyle">Town, BirthYear</p>
+          </ion-text>
+        </ion-label>
+      </ion-item> 
     </ion-list>
 <!-- 
 

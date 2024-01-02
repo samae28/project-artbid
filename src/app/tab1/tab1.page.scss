@@ -29,9 +29,23 @@ ion-label {
   font-weight: bold;
   h4 {
     font-weight: bold;
-    font-size:1.2rem;
+    font-size:.9rem;
   }
   p {
     font-size: 0.7rem;
+  }
+}
+
+.circular-thumbnail {
+  width: 75px; /* Set your desired width */
+  height: 75px; /* Set your desired height */
+  border-radius: 50%; /* Create a circular shape */
+  overflow: hidden; /* Ensure the image stays within the circular boundaries */
+
+  img {
+    width: 100%; /* Make the image fill the circular container */
+    height: 100%; /* Make the image fill the circular container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 50%; /* Ensure the image stays within the circular boundaries */
   }
 }
