@@ -16,128 +16,36 @@
     </ion-segment-button>
   </ion-segment>
   <div *ngIf="selectedSegment === 'medium'">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-            </ion-card-header>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+
+    <ion-list> 
+      <ion-item lines="none"  *ngFor="let records of artMediumList">
+        <ion-thumbnail slot="start">
+          <img  src="https://art-bid.000webhostapp.com/art--medium/{{records.remarks}}" alt="Slide 3"/>
+        </ion-thumbnail>
+        <ion-label>
+          <h4>{{records.medium_type}}</h4>
+          <ion-text color="medium">
+            <p class="pStyle">{{records.medium_description}}</p> 
+          </ion-text>
+        </ion-label>
+        <ion-button color="dark" (click)="viweArtByMedium(records.medium_id,records.medium_type)">View<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button> 
+      </ion-item> 
+    </ion-list> 
   </div>
   <div *ngIf="selectedSegment === 'artists'">
-    <ion-card>
-      <ion-card-content>
-        <ion-list>
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </ion-thumbnail>
-            <ion-card-title>Name</ion-card-title>
-            <ion-card-subtitle>Medium Expertise</ion-card-subtitle>
-          </ion-item>
-    
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </ion-thumbnail>
-            <ion-card-title>Name</ion-card-title>
-            <ion-card-subtitle>Medium Expertise</ion-card-subtitle>
-          </ion-item>
-    
-          <ion-item>
-            <ion-thumbnail slot="start">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </ion-thumbnail>
-            <ion-card-title>Name</ion-card-title>
-            <ion-card-subtitle>Medium Expertise</ion-card-subtitle>
-          </ion-item>
-    
-          <ion-item lines="none">
-            <ion-thumbnail slot="start">
-              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-            </ion-thumbnail>
-            <ion-card-title>Name</ion-card-title>
-            <ion-card-subtitle>Medium Expertise</ion-card-subtitle>
-          </ion-item>
-        </ion-list>
-      </ion-card-content>
-    </ion-card>
+    <ion-list> 
+      <ion-item lines="none"  *ngFor="let records of ArtistList">
+        <ion-thumbnail slot="start">
+          <img  src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Slide 3"/>
+        </ion-thumbnail>
+        <ion-label>
+          <h4>{{records.artist_name}}</h4>
+          <ion-text color="medium">
+            <p class="pStyle">{{records.artist_bio}}</p> 
+          </ion-text>
+        </ion-label>
+        <ion-button color="dark" (click)="ViewArtist(records.artist_id)">View<ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button> 
+      </ion-item> 
+    </ion-list> 
   </div>
 </ion-content>

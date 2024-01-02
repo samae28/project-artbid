@@ -45,4 +45,25 @@ export class ApiCallsService {
   LoginAuth(email: any, password: any){ 
     return this.http.get(this.APIURL+"login.php?email="+email+"&password="+password);
   }
+ 
+  get_artists_list(){ 
+    return this.http.get(this.APIURL+"see-all-artists.php");
+  }
+ 
+  Get_art_medium(){ 
+    return this.http.get(this.APIURL+"art-medium-list.php");
+  }
+
+  Get_art_by_medium(art_medium: any){
+    return this.http.get(this.APIURL+"get-art-by-medium.php?art_medium="+art_medium);
+  }
+
+  Get_singleArtist(artist_id : any){
+    return this.http.get(this.APIURL+"see-single-artist.php?artist_id="+artist_id); 
+  }
+
+  Get_ArtworkByArtist(artist_id:any){ 
+    return this.http.get(this.APIURL+"see-art-by-artist.php?artist_id="+artist_id); 
+  } 
+
 }

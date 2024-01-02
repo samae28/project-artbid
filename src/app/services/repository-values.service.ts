@@ -11,6 +11,13 @@ export class RepositoryValuesService {
   AuctionViewing: any
   AuctionItemName: any
 
+  // For View Art By Medium 
+  ArtworkMediumType : any
+  ArtworkMediumName : any
+
+  // For View Artist Page 
+  ArtistID : any
+
   // 1 - Auction
   // 2 - Sold 
   // 3 - Available (Fixed Price)

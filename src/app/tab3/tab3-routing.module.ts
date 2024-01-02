@@ -9,6 +9,14 @@ const routes: Routes = [
   },  {
     path: 'fixed-item',
     loadChildren: () => import('./fixed-item/fixed-item.module').then( m => m.FixedItemPageModule)
+  },
+  {
+    path: 'modal-viewartbymedium',
+    loadChildren: () => import('./modal-viewartbymedium/modal-viewartbymedium.module').then( m => m.ModalViewartbymediumPageModule)
+  },
+  {
+    path: 'modal-view-artist',
+    loadChildren: () => import('./modal-view-artist/modal-view-artist.module').then( m => m.ModalViewArtistPageModule)
   }
 
 ];

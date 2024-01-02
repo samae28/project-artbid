@@ -6,6 +6,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicSlides, ModalController } from '@ionic/angular';
 import { ModalPage } from './modal/modal.page';
 import { ModalSeeallauctionPage } from './modal-seeallauction/modal-seeallauction.page';
+import { ModalViewArtistPage } from '../tab3/modal-view-artist/modal-view-artist.page';
 
 @Component({
   selector: 'app-tab1',
@@ -60,6 +61,19 @@ export class Tab1Page {
   async SeeAllAuction() {  
     const modal = await this.modalCtrl.create({
       component: ModalSeeallauctionPage,
+    });
+    modal.present();
+
+    const { data, role } = await modal.onWillDismiss();
+
+    if (role === 'confirm') { 
+    }
+  }
+
+  async ViewArtist(ID: any) {  
+    this.__repository__.ArtistID = ID;
+    const modal = await this.modalCtrl.create({
+      component: ModalViewArtistPage,
     });
     modal.present();
 

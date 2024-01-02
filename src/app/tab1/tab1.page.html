@@ -55,8 +55,7 @@
       <ion-list-header>
         <ion-label>
           <h4>Artists For you</h4>
-        </ion-label>
-        <ion-button>See All</ion-button>
+        </ion-label> 
       </ion-list-header>
       <ion-item lines="none" *ngFor="let records of FeaturedArtists">
         <ion-thumbnail slot="start" class="circular-thumbnail">
@@ -68,7 +67,7 @@
             <p class="pStyle">{{records.artist_contact_info}}</p>
           </ion-text>
         </ion-label>
-        <ion-button color="dark">View</ion-button>
+        <ion-button color="dark" (click)="ViewArtist(records.artist_id)">View</ion-button>
       </ion-item> 
     </ion-list>
 <!-- 
